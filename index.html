@@ -7,14 +7,22 @@
        <script type="text/jsx">
             const app = document.getElementById('app');
 
-            function Header(){
-                return <h1>Develop. Preview. Ship.</h1>;
+            function Header({title}){
+                return <h1>{title}</h1>;
+            }
+            function Header2(props){
+                return <h1>{props.title}</h1>;
+            }
+            function Header3({title}){
+                return <h1>{`Cool ${title}`}</h1>;
             }
 
             function HomePage(){
                 return (
                     <div>
-                        <Header />
+                        <Header title="React" />
+                        <Header2 title="Javascript"/>
+                        <Header3 title="JS" />
                     </div>
                 );
             }
